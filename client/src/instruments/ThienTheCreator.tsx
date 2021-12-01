@@ -12,7 +12,7 @@ import pic from '../img/xylophone.png'
 
 interface XylophoneKeyProps {
   note: string;
-  synth?: Tone.MonoSynth; // Contains library code for making sound
+  synth?: Tone.Synth; // Contains library code for making sound
   index: number,
   height: number,
   top: number,
@@ -47,11 +47,13 @@ export function XylophoneKey({
   );
 }
 
-function Xylophone({synth}: InstrumentProps): JSX.Element {
-  var setSynth = (oldSynth: Tone.Synth<Tone.SynthOptions>) => {
+function Xylophone({synth, setSynth}: InstrumentProps): JSX.Element {
+  
+  const setMonoSynth = () => {
+    setSynth(oldSynth => {
     oldSynth.disconnect();
-
-    return new Tone.MonoSynth({
+    
+    const synth: Tone.Synth<Tone.SynthOptions> = new Tone.MonoSynth({
       oscillator: {
         type: "square8"
         },
@@ -69,10 +71,10 @@ function Xylophone({synth}: InstrumentProps): JSX.Element {
         baseFrequency: 300,
         octaves: 2
       }
-    }).toDestination();
-  };
-  
-  var newSynth = setSynth(synth);
+    }).toDestination() as unknown as Tone.Synth<Tone.SynthOptions>;
+    return synth;
+    })
+  }
 
   const keys = List([
     { note: "C4", index: 0, top: 11, height: 388, color: "red"},
@@ -88,13 +90,13 @@ function Xylophone({synth}: InstrumentProps): JSX.Element {
   return (
     <div style={{ display: "flex", textAlign: "center", width: "640px", height: "408px"}}>
       <div style={{ userSelect: "none", position: "relative" }}>
-        <img src={pic} alt="pic" draggable="false" />
+        <img src={pic} alt="pic" draggable="false" onLoad={() => setMonoSynth()}/>
         {keys.map(
           key => {
             return (
               <XylophoneKey
                 note={key.note}
-                synth={newSynth}
+                synth={synth}
                 index={key.index}
                 height={key.height}
                 top={key.top}
@@ -103,8 +105,6 @@ function Xylophone({synth}: InstrumentProps): JSX.Element {
             );
           })
         }
-      </div>
-      <div>
       </div>
     </div>
   );
