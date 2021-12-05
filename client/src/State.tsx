@@ -8,6 +8,9 @@ import { DrumInstrument } from './instruments/Drum';
 import { WaveformVisualizer } from './visualizers/Waveform';
 import { trumanWaveVisualizer } from './visualizers/trumanWave';
 
+import { GuitarInstrument } from './instruments/haozhanli000';
+import { newformVisualizer } from './visualizers/haozhanli000';
+
 import { XylophoneInstrument } from './instruments/ThienTheCreator';
 import { Spiral } from './visualizers/ThienTheCreator';
 
