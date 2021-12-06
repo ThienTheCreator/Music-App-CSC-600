@@ -3,10 +3,10 @@ import { List, Map } from 'immutable';
 
 // project dependencies
 import { PianoInstrument } from './instruments/Piano';
-import { DrumInstrument } from './instruments/Drum';
+import { RecorderInstrument } from './instruments/doomphd';
 
 import { WaveformVisualizer } from './visualizers/Waveform';
-import { trumanWaveVisualizer } from './visualizers/trumanWave';
+import { trumanWaveVisualizer } from './visualizers/doomphd';
 
 import { GuitarInstrument } from './instruments/haozhanli000';
 import { newformVisualizer } from './visualizers/haozhanli000';
@@ -27,8 +27,8 @@ import { Spiral } from './visualizers/ThienTheCreator';
 export type AppState = Map<string, any>;
 
 
-const instruments = List([PianoInstrument, DrumInstrument,XylophoneInstrument]);
-const visualizers = List([WaveformVisualizer, trumanWaveVisualizer,Spiral]);
+const instruments = List([PianoInstrument, RecorderInstrument,XylophoneInstrument,GuitarInstrument]);
+const visualizers = List([WaveformVisualizer, trumanWaveVisualizer,Spiral,newformVisualizer]);
 export const defaultState: AppState = Map<string, any>({
   instruments,
   visualizers

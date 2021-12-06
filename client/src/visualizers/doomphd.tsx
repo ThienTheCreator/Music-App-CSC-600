@@ -48,6 +48,7 @@ export const trumanWaveVisualizer = new Visualizer(
     //     // Place vertex
     //     p5.vertex(x, y);
     //   }
+    
     p5.strokeWeight(dim * 0.025);
     p5.background(0, 0, 0, 255);
     p5.stroke("blue");
