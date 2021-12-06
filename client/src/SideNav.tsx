@@ -128,7 +128,7 @@ function Songs({ state, dispatch }: SideNavProps): JSX.Element {
         const title: string = song.get("songTitle");
         const album: string = song.get("album");
         const artist: string = song.get("artist");
-        console.log(searchValue);
+
         return title.includes(searchValue) || album.includes(searchValue) || artist.includes(searchValue);
       })
       .map(song => (

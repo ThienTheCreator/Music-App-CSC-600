@@ -165,7 +165,7 @@ function Piano({ synth, setSynth }: InstrumentProps): JSX.Element {
             key={o}
             title={o}
             onClick={() => setOscillator(o)}
-            active={synth?.oscillator.type === o}
+            active={synth?.oscillator?.type === o}
           />
         ))}
       </div>
