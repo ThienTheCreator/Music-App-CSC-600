@@ -19,7 +19,7 @@ INSERT INTO songs (id, song_title, notes)
 VALUES (2, 'Sonata No.11', 'G4 G4 G4 B4 E3 E5 E5 E5 D3 C3 B4 B4 B4 F#4 F#4 F#4 E4');
 
 INSERT INTO songs (id, song_title, notes)
-VALUES (3, 'Ed Sheeran', 'G3 D4 E4 G4 G3 G4 G3 G3 G3 A4 G4 E3 E3 G4 B4');
+VALUES (3, 'Perfect', 'G3 D4 E4 G4 G3 G4 G3 G3 G3 A4 G4 E3 E3 G4 B4');
 
 INSERT INTO songs (id, song_title, notes)
 VALUES (4, 'Canon In D', 'D3 A2 B2 F#2 G2 D2 G2 A2 D3 F#5 A2 E5 B2 D5');
