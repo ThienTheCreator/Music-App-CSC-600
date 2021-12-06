@@ -11,8 +11,8 @@ import { trumanWaveVisualizer } from './visualizers/doomphd';
 import { GuitarInstrument } from './instruments/haozhanli000';
 import { newformVisualizer } from './visualizers/haozhanli000';
 
-import { FluteInstrument } from './instruments/Flute';
-import { testvis } from './visualizers/Ephillpott-Vis';
+import { FluteInstrument } from './instruments/Ephillpott';
+import { testvis } from './visualizers/Ephillpott';
 
 import { XylophoneInstrument } from './instruments/ThienTheCreator';
 import { Spiral } from './visualizers/ThienTheCreator';
