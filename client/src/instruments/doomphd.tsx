@@ -2,7 +2,7 @@
 import * as Tone from 'tone';
 import classNames from 'classnames';
 import { List, Range } from 'immutable';
-import recorder from '../img/recorder.jpg'
+import recorder from '../img/pan.jpg'
 import React from 'react';
 //import styles from "../guitar-style.module.css";
 import styles from "../css/recorder.module.css"
@@ -44,7 +44,7 @@ import { Instrument, InstrumentProps } from '../Instruments';
  
  function Recorder({ synth, setSynth }: InstrumentProps): JSX.Element {
    const recorderLines: string[][] = [
-     ["C#5", "D#4", "A#9","B6", "E2", "E2", "E2"],
+     ["C#5", "D#4", "A#9","B6", "E2", "E2","C#5", "D#4", "A#9","B6", "E2", "E2","E2"],
      
    ];
  
