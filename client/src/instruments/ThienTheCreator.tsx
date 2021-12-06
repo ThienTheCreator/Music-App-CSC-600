@@ -93,30 +93,30 @@ function Xylophone({synth, setSynth}: InstrumentProps): JSX.Element {
     { note: "C6", index: 7, top: 192, height: 210, color: "pink"},
   ]);
   // Press QWERTYUI to play a note
-  const escFunction = useCallback((event) => {
+  const keypressFunction = useCallback((event) => {
     switch(event.keyCode){
-      case 81:
+      case 49:
         synth?.triggerAttackRelease("C5","8n");
         break;
-      case 87:
+      case 50:
         synth?.triggerAttackRelease("D5","8n");
         break;
-      case 69:
+      case 51:
         synth?.triggerAttackRelease("E5","8n");
         break; 
-      case 82:
+      case 52:
         synth?.triggerAttackRelease("F5","8n");
         break;
-      case 84:
+      case 53:
         synth?.triggerAttackRelease("G5","8n");
         break;
-      case 89:
+      case 54:
         synth?.triggerAttackRelease("A5","8n");
         break;
-      case 85:
+      case 55:
         synth?.triggerAttackRelease("B5","8n");
         break;
-      case 73:
+      case 56:
         synth?.triggerAttackRelease("C6","8n");
         break;
       default:
@@ -125,10 +125,10 @@ function Xylophone({synth, setSynth}: InstrumentProps): JSX.Element {
   }, [synth]);
 
   useEffect(() => {
-    document.addEventListener("keydown", escFunction, false);
+    document.addEventListener("keydown", keypressFunction, false);
 
     return () => {
-      document.removeEventListener("keydown", escFunction, false);
+      document.removeEventListener("keydown", keypressFunction, false);
     };
   });
 

@@ -29,7 +29,8 @@ type DispatchActionType =
   | 'SET_SONGS'
   | 'PLAY_SONG'
   | 'STOP_SONG'
-  | 'SET_LOCATION';
+  | 'SET_LOCATION'
+  | 'SEARCH_SONG';
 
 export class DispatchAction {
   readonly type: DispatchActionType;
@@ -94,6 +95,11 @@ export function appReducer(state: AppState, action: DispatchAction): AppState {
         return state
           .set('instrument', instrument)
           .set('visualizer', visualizer);
+      }
+      case 'SEARCH_SONG':
+      {
+        const searchValue = args.get('searchValue');
+        return state.set('searchValue', searchValue);
       }
       default:
         console.error(`type unknown: ${type}\n`, args.toJS());

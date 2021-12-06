@@ -9,7 +9,7 @@ export const testvis = new Visualizer(
     const width = window.innerWidth;
     const space_between_lines = (width/2) / 64
     const height = window.innerHeight / 2;    
-    analyzer.type = 'fft'
+    analyzer.type = 'fft';
 
     
     const values = analyzer.getValue();    
@@ -18,7 +18,7 @@ export const testvis = new Visualizer(
     for (let i = 0; i < values.length; i++) {
         p5.fill(i*3,255,255); //fill(i,255,255);
         let amp = values[i] as number;
-        let y = p5.map(amp, 0, 256, height, 350);
+        let y = p5.map(amp, 0, 256, height/2, 350);
         p5.rect((width/2) + (i * space_between_lines), y, space_between_lines, height - y);
         p5.rect((width/2) - (i * space_between_lines), y, space_between_lines, height - y);
       }

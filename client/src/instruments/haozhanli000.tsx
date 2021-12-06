@@ -3,7 +3,7 @@ import * as Tone from "tone";
 import { Instrument, InstrumentProps } from "../Instruments";
 import guitarImage from "../img/guitar.svg";
 import styles from "../guitar-style.module.css";
-import { fromJS } from 'immutable';
+// import { fromJS } from 'immutable';
 interface GuitarLineProps {
   notes: string[];
   index: number;

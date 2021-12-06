@@ -11,10 +11,12 @@ import { trumanWaveVisualizer } from './visualizers/doomphd';
 import { GuitarInstrument } from './instruments/haozhanli000';
 import { newformVisualizer } from './visualizers/haozhanli000';
 
-import { XylophoneInstrument } from './instruments/ThienTheCreator';
-import { Spiral } from './visualizers/ThienTheCreator';
 import { FluteInstrument } from './instruments/Flute';
 import { testvis } from './visualizers/Ephillpott-Vis';
+
+import { XylophoneInstrument } from './instruments/ThienTheCreator';
+import { Spiral } from './visualizers/ThienTheCreator';
+
 
 /** ------------------------------------------------------------------------ **
  * The entire application state is stored in AppState.
@@ -29,8 +31,8 @@ import { testvis } from './visualizers/Ephillpott-Vis';
 export type AppState = Map<string, any>;
 
 
-const instruments = List([PianoInstrument, RecorderInstrument,XylophoneInstrument,GuitarInstrument,FluteInstrument]);
-const visualizers = List([WaveformVisualizer, trumanWaveVisualizer,Spiral,newformVisualizer,testvis]);
+const instruments = List([PianoInstrument, RecorderInstrument, GuitarInstrument, FluteInstrument, XylophoneInstrument]);
+const visualizers = List([WaveformVisualizer, trumanWaveVisualizer, newformVisualizer, testvis, Spiral]);
 export const defaultState: AppState = Map<string, any>({
   instruments,
   visualizers
