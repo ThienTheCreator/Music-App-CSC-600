@@ -13,6 +13,8 @@ import { newformVisualizer } from './visualizers/haozhanli000';
 
 import { XylophoneInstrument } from './instruments/ThienTheCreator';
 import { Spiral } from './visualizers/ThienTheCreator';
+import { FluteInstrument } from './instruments/Flute';
+import { testvis } from './visualizers/Ephillpott-Vis';
 
 /** ------------------------------------------------------------------------ **
  * The entire application state is stored in AppState.
