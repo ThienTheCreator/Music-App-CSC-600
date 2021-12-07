@@ -14,6 +14,7 @@ CREATE TABLE songs (
 	artist text NOT NULL
 );
 
+
 INSERT INTO songs (id, song_title, notes, album, artist) 
 VALUES (
 	1, 
