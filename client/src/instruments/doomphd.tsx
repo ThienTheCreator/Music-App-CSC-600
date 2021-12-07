@@ -39,18 +39,34 @@ import { Instrument, InstrumentProps } from '../Instruments';
      </div>
    );
  }
- 
+
  
  
  function Recorder({ synth, setSynth }: InstrumentProps): JSX.Element {
+
+  const setMonoSynth = () => {
+    setSynth(oldSynth => {
+      oldSynth.disconnect();
+      const synth: Tone.Synth<Tone.SynthOptions> = new Tone.MonoSynth({
+        oscillator: {
+          type: "square"
+        },
+        envelope: {
+          attack: 0.1
+        }
+      }).toDestination() as unknown as Tone.Synth<Tone.SynthOptions>;
+      synth.set({ detune: -800, portamento: 10});
+      return synth;
+    })
+  }
    const recorderLines: string[][] = [
-     ["C#5", "D#4", "A#9","B6", "E2", "E2","C#5", "D#4", "A#9","B6", "E2", "E2","E2"],
+     ["C3", "D3", "E3","F3", "G3", "A4","B4", "C4", "D4","E4", "F4", "A5","B5"],
      
    ];
  
    return (
      <div className={styles.wrapper}>
-       <img alt="" src={recorder} className={styles.recorderImg} />
+       <img alt="" src={recorder} draggable="false" onLoad={() => setMonoSynth()} />
        <div className={styles.lineBox}>
          {recorderLines.map((item, index) => (
            <RecorderNote synth={synth} index={index} key={index} notes={item} />
@@ -60,4 +76,4 @@ import { Instrument, InstrumentProps } from '../Instruments';
    );
  }
  
- export const RecorderInstrument = new Instrument("Recorder", Recorder);
+ export const RecorderInstrument = new Instrument("Panflute", Recorder);

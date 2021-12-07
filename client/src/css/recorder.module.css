@@ -8,11 +8,11 @@
 }
   .lineBox {
     position: absolute;
-    margin-top: -200px;
-    margin-left: -330px;
+    margin-top: -180px;
+    margin-left: -325px;
     left: 200;
     top: 100px;
-    width: 360px;
+    width: 640px;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -34,7 +34,5 @@
     height: 55px;
     flex-grow: 1;
   }
-  /* .line > div:active {
-    background-color: black;
-  } */
+
   
