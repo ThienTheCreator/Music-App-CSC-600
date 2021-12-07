@@ -92,7 +92,7 @@ function Xylophone({synth, setSynth}: InstrumentProps): JSX.Element {
     { note: "B5", index: 6, top: 172, height: 230, color: "purple"},
     { note: "C6", index: 7, top: 192, height: 210, color: "pink"},
   ]);
-  // Press QWERTYUI to play a note
+  // Press 1-8 keys to play a note
   const keypressFunction = useCallback((event) => {
     switch(event.keyCode){
       case 49:
