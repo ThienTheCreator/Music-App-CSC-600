@@ -34,7 +34,7 @@ export function GuitarLine({
 
 function Guitar({ synth, setSynth }: InstrumentProps): JSX.Element {
   const guitarLines: string[][] = [
-    ["C#5", "D#4", "A#9"],
+    ["C#5", "D#4", "A#8"],
     ["B6", "E2", "F7"],
     ["A#1", "F8", "B3"],
   ];
