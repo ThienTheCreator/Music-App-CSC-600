@@ -102,20 +102,46 @@ function Visualizers({ state }: SideNavProps): JSX.Element {
   );
 }
 
+function Searchbar({ state, dispatch }: SideNavProps): JSX.Element {
+  
+  var searchValue: string;
+    
+  searchValue = state.get('searchValue', String);
+  
+  function onChange(e: { target: { value: any; }; }){
+    dispatch(new DispatchAction('SEARCH_SONG', { searchValue: e.target.value }));  
+    searchValue = state.get('searchValue');
+  }
+
+  return (
+    <input type="text" placeholder="Search.." value={searchValue} onChange={onChange}></input>
+  );
+}
+
 function Songs({ state, dispatch }: SideNavProps): JSX.Element {
   const songs: List<any> = state.get('songs', List());
+  const searchValue: string = state.get('searchValue') === undefined ? "" : state.get('searchValue');
   return (
     <Section title="Playlist">
-      {songs.map(song => (
+      {
+      songs.filter(song => {
+        const title: string = song.get("songTitle");
+        const album: string = song.get("album");
+        const artist: string = song.get("artist");
+
+        return title.includes(searchValue) || album.includes(searchValue) || artist.includes(searchValue);
+      })
+      .map(song => (
         <div
           key={song.get('id')}
           className="f6 pointer underline flex items-center no-underline i dim"
+          style={{paddingBottom: "12px"}}
           onClick={() =>
             dispatch(new DispatchAction('PLAY_SONG', { id: song.get('id') }))
           }
         >
           <Music20 className="mr1" />
-          {song.get('songTitle')}
+          {song.get('songTitle')} from {song.get('album')} by {song.get('artist')}
         </div>
       ))}
     </Section>
@@ -126,11 +152,12 @@ export function SideNav({ state, dispatch }: SideNavProps): JSX.Element {
   return (
     <div className="absolute top-0 left-0 bottom-0 w5 z-1 shadow-1 bg-white flex flex-column">
       <div className="h3 fw7 f5 flex items-center pl3 bb b--light-gray">
-        Nameless App
+        Music App
       </div>
       <div className="flex-auto">
         <Instruments state={state} dispatch={dispatch} />
         <Visualizers state={state} dispatch={dispatch} />
+        <Searchbar state = {state} dispatch = {dispatch} />
         <Songs state={state} dispatch={dispatch} />
       </div>
     </div>
