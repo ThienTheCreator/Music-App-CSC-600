@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/Music-App-CSC-600/static/css/main.2da6be47.css",
+    "main.js": "/Music-App-CSC-600/static/js/main.51ce16b4.js",
+    "static/media/pan.jpg": "/Music-App-CSC-600/static/media/pan.ef47b30f93f91a3d76dd.jpg",
+    "static/media/recorder.png": "/Music-App-CSC-600/static/media/recorder.4bf9524908f7aed1af38.png",
+    "static/media/xylophone.png": "/Music-App-CSC-600/static/media/xylophone.ba1d900b76bd7c672647.png",
+    "static/media/guitar.svg": "/Music-App-CSC-600/static/media/guitar.f91bea88101e2e9a364e03dde7da73fa.svg",
+    "index.html": "/Music-App-CSC-600/index.html",
+    "main.2da6be47.css.map": "/Music-App-CSC-600/static/css/main.2da6be47.css.map",
+    "main.51ce16b4.js.map": "/Music-App-CSC-600/static/js/main.51ce16b4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2da6be47.css",
+    "static/js/main.51ce16b4.js"
+  ]
+}
