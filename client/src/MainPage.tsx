@@ -39,7 +39,7 @@ function InstrumentPanel({ state, dispatch }: PanelProps): JSX.Element {
   );
 }
 
-function VisualizerPanel({ state }: PanelProps): JSX.Element {
+function VisualizerPanel({ state, dispatch }: PanelProps): JSX.Element {
   /**
    * This React component is the top-level for the visualizer.
    */

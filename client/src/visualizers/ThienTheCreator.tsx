@@ -6,8 +6,8 @@ import * as Tone from 'tone';
 import { Visualizer } from '../Visualizers';
 
 
-export const Spiral = new Visualizer(
-  'Spiral',
+export const ThienSpiral = new Visualizer(
+  'Thien\'s Spiral',
   (p5: P5, analyzer: Tone.Analyser) => {
     const width = window.innerWidth;
     const height = window.innerHeight / 2;

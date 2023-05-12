@@ -15,7 +15,7 @@ import { FluteInstrument } from './instruments/Ephillpott';
 import { testvis } from './visualizers/Ephillpott';
 
 import { XylophoneInstrument } from './instruments/ThienTheCreator';
-import { Spiral } from './visualizers/ThienTheCreator';
+import { ThienSpiral } from './visualizers/ThienTheCreator';
 
 
 /** ------------------------------------------------------------------------ **
@@ -31,8 +31,8 @@ import { Spiral } from './visualizers/ThienTheCreator';
 export type AppState = Map<string, any>;
 
 
-const instruments = List([PianoInstrument, RecorderInstrument, GuitarInstrument, FluteInstrument, XylophoneInstrument]);
-const visualizers = List([WaveformVisualizer, trumanWaveVisualizer, newformVisualizer, testvis, Spiral]);
+const instruments = List([ XylophoneInstrument, PianoInstrument, RecorderInstrument, GuitarInstrument, FluteInstrument]);
+const visualizers = List([ ThienSpiral, WaveformVisualizer, trumanWaveVisualizer, newformVisualizer, testvis]);
 export const defaultState: AppState = Map<string, any>({
   instruments,
   visualizers

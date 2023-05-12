@@ -24,8 +24,10 @@ type DispatchArgs = {
 
 // A simple algebraic data-type with string literal types
 type DispatchActionType =
+  /*
   | 'SET_SOCKET'
-  | 'DELETE_SOCKET'
+  | 'DELETE_SOCKET' 
+  */
   | 'SET_SONGS'
   | 'PLAY_SONG'
   | 'STOP_SONG'
@@ -54,6 +56,7 @@ export function appReducer(state: AppState, action: DispatchAction): AppState {
   // Question: Does this function remind of you registering callbacks?
   const newState = (() => {
     switch (type) {
+      /*
       case 'SET_SOCKET': {
         const oldSocket = state.get('socket');
         if (oldSocket) {
@@ -65,6 +68,7 @@ export function appReducer(state: AppState, action: DispatchAction): AppState {
       case 'DELETE_SOCKET': {
         return state.delete('socket');
       }
+      */
       case 'SET_SONGS': {
         const songs = args.get('songs');
         return state.set('songs', songs);

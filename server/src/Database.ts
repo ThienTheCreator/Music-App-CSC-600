@@ -85,7 +85,7 @@ export class DB {
         if (err) {
           reject(err);
         } else {
-          resolve(rows.map(r => camelcaseKeys(r)));
+          resolve(rows.map((r: any) => camelcaseKeys(r)));
         }
       });
     });
