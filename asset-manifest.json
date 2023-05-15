@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/Music-App-CSC-600/static/css/main.836cf6f2.chunk.css",
+    "main.js": "/Music-App-CSC-600/static/js/main.afa8c0fd.chunk.js",
+    "main.js.map": "/Music-App-CSC-600/static/js/main.afa8c0fd.chunk.js.map",
+    "runtime-main.js": "/Music-App-CSC-600/static/js/runtime-main.7d67282b.js",
+    "runtime-main.js.map": "/Music-App-CSC-600/static/js/runtime-main.7d67282b.js.map",
+    "static/css/2.a1596f27.chunk.css": "/Music-App-CSC-600/static/css/2.a1596f27.chunk.css",
+    "static/js/2.3dbaddc6.chunk.js": "/Music-App-CSC-600/static/js/2.3dbaddc6.chunk.js",
+    "static/js/2.3dbaddc6.chunk.js.map": "/Music-App-CSC-600/static/js/2.3dbaddc6.chunk.js.map",
+    "index.html": "/Music-App-CSC-600/index.html",
+    "static/css/2.a1596f27.chunk.css.map": "/Music-App-CSC-600/static/css/2.a1596f27.chunk.css.map",
+    "static/css/main.836cf6f2.chunk.css.map": "/Music-App-CSC-600/static/css/main.836cf6f2.chunk.css.map",
+    "static/js/2.3dbaddc6.chunk.js.LICENSE.txt": "/Music-App-CSC-600/static/js/2.3dbaddc6.chunk.js.LICENSE.txt",
+    "static/media/guitar.f91bea88.svg": "/Music-App-CSC-600/static/media/guitar.f91bea88.svg",
+    "static/media/pan.ef47b30f.jpg": "/Music-App-CSC-600/static/media/pan.ef47b30f.jpg",
+    "static/media/recorder.4bf95249.png": "/Music-App-CSC-600/static/media/recorder.4bf95249.png",
+    "static/media/xylophone.ba1d900b.png": "/Music-App-CSC-600/static/media/xylophone.ba1d900b.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7d67282b.js",
+    "static/css/2.a1596f27.chunk.css",
+    "static/js/2.3dbaddc6.chunk.js",
+    "static/css/main.836cf6f2.chunk.css",
+    "static/js/main.afa8c0fd.chunk.js"
+  ]
+}
